@@ -3,19 +3,19 @@ package ejerciciosJava5;
 public class Ejercicio7 {
 
 	public static void main(String[] args) {
-		int numero = 73;
-		boolean isPrimo= true;
-		for (int i = 2; i <= numero/2; i++) {
-			if (numero % i == 0) {
-				isPrimo = false;
+		int numero = 100, suma = 0, contador = 0;
+	
+		for (int i = 0; i < numero ; i++) {
+			if (i % 5 == 0 ) {
+				contador++;
+				suma += i;
+			}
+			if (contador == 10) {
+				break;
 			}
 		}
-		if (isPrimo) {
-			System.out.println(numero+" es primo" );
-		}else {
-			System.out.println(numero+" no es primo" );
-		}
-		
+	System.out.println("la suma de los numero es :"+suma);
 	}
+	
 
 }
