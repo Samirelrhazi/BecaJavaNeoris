@@ -1,4 +1,4 @@
-package Operadores;
+package ejerciciosJava4;
 
 public class Geometria {
 	final static int RADIO = 23;

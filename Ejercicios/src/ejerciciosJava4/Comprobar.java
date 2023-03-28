@@ -1,6 +1,6 @@
-package Operadores;
+package ejerciciosJava4;
 
-public class comprobar {
+public class Comprobar {
 
 	public static void main(String[] args) {
 		int valor = 0;

@@ -1,4 +1,4 @@
-package Operadores;
+package ejerciciosJava4;
 
 import com.datos.Datos2;
 
