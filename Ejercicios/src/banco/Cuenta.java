@@ -30,17 +30,25 @@ public class Cuenta {
 	public void ingresar(double x) {
 
 		Movimiento movimiento = new Movimiento();
-		movimiento.setImporte(x);
-		addMovimientos(movimiento);
+		if (x >= 1 ) {
+			movimiento.setImporte(x);
+			addMovimientos(movimiento);
+		} else {
+			System.out.println("no se pueden ingresar sumas negativas");
+		}
 
 		}
 
 	public void ingresar(String concepto, double x) {
 
 		Movimiento movimiento = new Movimiento();
-		movimiento.setConcepto(concepto);
-		movimiento.setImporte(x);
-		addMovimientos(movimiento);
+		if (x >= 1 ) {
+			movimiento.setConcepto(concepto);
+			movimiento.setImporte(x);
+			addMovimientos(movimiento);
+		} else {
+			System.out.println("no se pueden ingresar sumas negativas");
+		}
 
 	}
 

@@ -20,24 +20,34 @@ public class Credito extends Tarjeta {
 		this.mCredito = Credito;
 	}
 
+	@Override
 	public double getSaldo() {
-		return 0.0;
+		return getCuentaAsociada().getSaldo();
 	}
-
+	
+	@Override
 	public void ingresar(double x) {
-
-	}
-	public void liquidar(int mes, int año) {
+		getCuentaAsociada().ingresar("cajero automático",x);
 		
 	}
-	
-	public void pagoEnEstablecimiento(String datos,double x) {
 
+	public void retirar(double x) {
+		if (x >= 3) {
+			x-= x*0.05;
+			getCuentaAsociada().retirar(x);
+		}else {
+			System.out.println("el mínimo a retirar es de tres euros de 3€");
+		}
+		
+	}
+
+	public void pagoEnEstablecimiento(String datos, double x) {
+		System.out.println("Compra a crédito en: " + datos + " - Total = " + x);
 	}
 	
 	
-	public void retirar(double x) {
-
+	public void liquidar(int mes, int year) {
+		
 	}
 	
 }
