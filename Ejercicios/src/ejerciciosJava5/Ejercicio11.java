@@ -10,17 +10,16 @@ public class Ejercicio11 {
 	public static void mostrarPrimos() {
 		int contador =0;
 	    for (int i = 2; i <= 100; i++) {
-	        boolean esPrimo = true;
+	        boolean isPrimo = true;
 	        for (int j = 2; j < i; j++) {
 	            if (i % j == 0) {
-	                esPrimo = false;
+	                isPrimo = false;
 	                break;
 	            }
 	        }
-	        if (esPrimo) {
-	            System.out.print(i+ " ");
+	        if (isPrimo) {
+	            System.out.print(i+ " "); 
 	            contador++;
-	            
 	        }
 	    }
 	    System.out.println();
