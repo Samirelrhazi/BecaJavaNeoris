@@ -9,6 +9,7 @@ public class Movimiento  {
 	private double mImporte;
 	
 	public Movimiento() {
+		mFecha = LocalDate.now();
 	}
 
 	public String getConcepto() {
@@ -19,12 +20,8 @@ public class Movimiento  {
 		this.mConcepto = mConcepto;
 	}
 
-	public LocalDate getmFecha() {
+	public LocalDate getFecha() {
 		return mFecha;
-	}
-
-	public void setFecha(LocalDate mFecha) {
-		this.mFecha = mFecha;
 	}
 
 	public double getImporte() {

@@ -29,23 +29,16 @@ public class Cuenta {
 
 	public void ingresar(double x) {
 
-		Movimiento movimiento = new Movimiento();
-		if (x >= 1 ) {
-			movimiento.setImporte(x);
-			addMovimientos(movimiento);
-		} else {
-			System.out.println("no se pueden ingresar sumas negativas");
-		}
-
+		ingresar("Ingreso ",x);
 		}
 
 	public void ingresar(String concepto, double x) {
 
-		Movimiento movimiento = new Movimiento();
+		Movimiento mv = new Movimiento();
 		if (x >= 1 ) {
-			movimiento.setConcepto(concepto);
-			movimiento.setImporte(x);
-			addMovimientos(movimiento);
+			mv.setConcepto(concepto);
+			mv.setImporte(x);
+			addMovimientos(mv);
 		} else {
 			System.out.println("no se pueden ingresar sumas negativas");
 		}
@@ -53,21 +46,15 @@ public class Cuenta {
 	}
 
 	public void retirar(double x) {
-		Movimiento movimiento = new Movimiento();
-		if(getSaldo() > x) {
-			movimiento.setImporte(x*-1);
-			addMovimientos(movimiento);
-			}else {
-			System.out.println("Saldo en cuenta insuficiente.");
-			}
+		retirar("Retiro de dinero ",x);
 	}
 
 	public void retirar(String concepto, double x) {
-		Movimiento movimiento = new Movimiento();
+		Movimiento mv = new Movimiento();
 		if(getSaldo() > x) {
-			movimiento.setConcepto(concepto);
-			movimiento.setImporte(x*-1);
-			addMovimientos(movimiento);
+			mv.setConcepto(concepto);
+			mv.setImporte(-x);
+			addMovimientos(mv);
 			}else {
 				System.out.println("Saldo en cuenta insuficiente.");
 			}

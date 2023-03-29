@@ -22,12 +22,13 @@ public class Debito extends Tarjeta {
 	
 	@Override
 	public void retirar(double x) {
-		getCuentaAsociada().retirar(x);
+		getCuentaAsociada().retirar("Retiro cajero",x);
 	}
 	
 	@Override
 	public void pagoEnEstablecimiento(String datos, double x) {
-		System.out.println("Compras en : " + datos + " - Total = " + x);
+		getCuentaAsociada().retirar("Compras en "+datos,x);
+
 	}
 
 
